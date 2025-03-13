@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale=1>
+        <title>Старостин Ярослав - сайт визитка</title>
+        <style>
+            body {
+                background-color: darkgray;
+            }
+            .Head {
+                width: 80%;
+                height: 1300px;
+                background-color: lightgray;
+                margin: 0;
+                border: 1px solid black;
+                border-radius: 20px;
+                display: fixed;
+                justify-self: center;
+            }
+            h1 {
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 42px;
+            }
+            .ava {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                border: 1px solid black;
+                margin-left: 20px;
+            }
+            .inf {
+                margin-left: 17%;
+                margin-top: -14%;
+            }
+            p {
+                font-size: 20px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .bio {
+                text-align: left;
+                margin-left: 30px;
+            }
+            hr {
+                width: 80%;
+                color: black;
+                background-color: black;
+            }
+            h2 {
+                font-size: 20px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                margin-left: 5%;
+                text-align: justify;
+            }
+            ul {
+                font-size: 25px;
+                margin-left: 30px;
+                margin-top: -15px;
+            }
+            li {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .me {
+                width: 50%;
+            }
+            .java {
+                display: flex;
+                margin-left: 1100px;
+                margin-top: -850px;
+                width: 450px;
+            }
+            a {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 25px;
+            }
+            .end {
+                border: 1px solid black;
+                background-color: gray;
+                height: 255px;
+                border-radius: 0 0 20px 20px;
+            }
+            .end a {
+                text-decoration: none;
+            }
+            .end ul {
+                list-style: none;
+                padding: 0;
+            }
+            .vk {
+                margin-left: 680px;
+            }
+            .tg {
+                margin-top: -35px;
+            }
+            .next {
+                font-size: 22px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                cursor: pointer;
+                margin-left: 570px
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Head">
+            <h1>Сайт визитка</h1>
+            <h1 class="bio">Информация:</h1>
+            <div class="bio">
+                <img class="ava" src="Image/ava.jpg">
+                <div class="inf">
+                    <p>Старостин Ярослав Русланович, 18 лет</p>
+                    <p>Дата рождения: 16.09.2006</p>
+                    <p>Место учебы: Вологдский колледж связи и информационных технологий</p>
+                    <p>Увлечения: программировани, спорт</p>
+                </div>
+                <hr style="margin-top: 60px;">
+            </div>
+            <div class="me">
+                <h1 class="bio">Обо мне:</h1>
+                <h2 сlass="information">Старостин Ярослав Русланович, родился в вологде, обучаюсь в колледже связи, а также увлекаюсь программированием
+                    Я являюсь полезным специалистом, так как имею познания в создании сайтов и умею работать в команде. Так же был
+                    опыт работы по специальности во время прохождения практики.
+                </h2>
+                <h1 class="bio">Навыки:</h1>
+                <ul>
+                    <li>Java</li>
+                    <li>CSS</li>
+                    <li>HTML</li>
+                    <li>JSON</li>
+                    <li>Работа в команде</li>
+                </ul>
+            </div>
+            <div class="work">
+                <h1>Мои работы:</h1>
+                <ul>
+                <li><a href="https://github.com/Yanmoree/CoolJob">CoolJob</a></li>
+                <li><a href="http://p9005334.beget.tech/">Ixoratus Game</a></li>
+                <li><a href="https://www.figma.com/design/iQQXYKnANL9mJTNh5qxVhI/Untitled?node-id=2-4&t=h8iftMuryFPoS68r-1">Изначальный CoolJob</a></li>
+                </ul>
+            </div>
+            <div class="end">
+                <h1>Ссылки на нас</h1>
+                <ul>
+                    <li><i class="fas fa-envelope"></i>Email: <a href="https://mail.yandex.ru/?uid=769742211#message/186336434582454565">yarikstarostin@yandex.ru</a></li>
+                    <li><i class="fas fa-phone"></i>Phone: <a href="tel:+79005338714">+79005338714</a></li>
+                    <li><i class="fab fa-vk"></i>ВК: <a href="https://vk.com/deaglechem">Старостин Ярослав</a> </li>
+                </ul>
+                <button class="next" onclick="document.location='Next.html'">Перейти на следующую страницу</button>
+            </div>
+        </div>
+        <img class="java" src="Image/java.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </body>
+</html>
