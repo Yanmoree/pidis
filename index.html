@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>GRALIED</title>
+    <style>
+      body {
+        max-width: 100vw;
+        width: 100%;
+        margin: 0;
+        background-color: rgb(201, 200, 200);
+      }
+      .top {
+        width: 100vw;
+        background-color: rgb(59, 59, 59);
+        color: white;
+        display: flex;
+      }
+      header {
+        text-align: start;
+        font-size: 3vw;
+        margin-left: 7vw;
+      }
+      .search {
+        height: 2vw;
+        width: 24vw;
+        margin-top: 0.6vw;
+        margin-left: 5vw;
+        padding-left: 3vw;
+        border: 1px solid black;
+      }
+      .search1 {
+        height: 1.8vw;
+        width: 5vw;
+        margin-top: 0.8vw;
+        margin-left: -5.3vw;
+        border: 1px solid rgb(192, 192, 192);
+        background-color: white;
+      }
+      .search1:hover {
+        border: 1px solid black;
+      }
+      .dropbtn {
+        background-color: white;
+        color: black;
+        padding: 0.3vw;
+        border: 1px solid rgb(192, 192, 192);
+        cursor: pointer;
+        margin-top: 0.8vw;
+        margin-left: 44vw;
+      }
+      .dropbtn:hover, .dropbtn:focus {
+        border: 1px solid black;
+        background-color: white;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        margin-left: 43.8vw;
+        min-width: 3vw;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .dropbtn-content a {
+        color: black;
+        text-decoration: none;
+        display: block;
+      }
+      .dropbtn-content a:hover {
+        background-color: rgb(209, 209, 209);
+      }
+      .show {
+        display: block;
+      }
+      .rectangle {
+        margin-top: 1vw;
+        justify-self: center;
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 2wv;
+      }
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5px auto;
+        border: 1px solid black;
+        width: 80%;
+      }
+      .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-weight: bold;
+      }
+      .close:hover, .close:focus {
+        color: red;
+        cursor: pointer;
+      }
+      .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s;
+      }
+      @-webkit-keyframes animetezoom {
+        from {-webkit-transform: scale(0);}
+        to {-webkit-transform: scale(1);}
+      }
+      @keyframes animatezoom {
+        from {transform: scale(0);}
+        to {transform: scale(1);}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+    <header>GRALIED</header>
+    <input type="text" class="search" placeholder="Введите что хотите найти">
+    <input type="submit" class="search1" value="Поиск">
+
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Меню</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">Главная</a>
+            <a href="#">Заказы</a>
+            <a href="#">Корзина</a>
+            <a href="#">Выход</a>
+          </div>
+          <script>
+            function myFunction () {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+
+            window.onclick = function(event) {
+              if (!event.target.matches('dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i <dropdowns.length; i++) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          </script>
+      </div>
+    </div>
+    <div class="rectangle">
+      <a href="https://Balenciaga.com" style="text-decoration: none;">
+      <img src="https://i.pinimg.com/originals/d2/72/48/d27248c90a543f42564f29d4a7f41df4.jpg" style="width: 30vw;">
+      </a>
+      <a href="https://vetements.com" style="text-decoration: none;">
+      <img src="https://i.pinimg.com/originals/a1/8a/bf/a18abf57021cc39b338eb7de1e25244a.png" style="width: 30.8vw;">
+      </a>
+      <a href="https://Gucci.com" style="text-decoration: none;">
+      <img src="https://procapitalist.ru/images/articles/2021/October/22-11-20216.jpg" style="width: 28.9vw;">
+      </a>
+    </div>
+    <div class="registration">
+      <button onclick="document.getElementById('id01').style.display='block'">Зарегестрироваться</button>
+
+      <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'"
+        class="close" title="Close Modal">&times;</span>
+
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="container">
+            <label for="uname"><b>Логин</b></label>
+            <input type="text" placeholder="Введите логин" name="uname" required>
+
+            <label for="psw"><b>Пароль</b></label>
+            <input type="password" placeholder="Введите пароль" name="psw" required>
+
+            <button type="submit">Зарегестрироваться</button>
+          </div>
+          <div class="container" style="background-color: #f1f1f1;">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Закрыть</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
